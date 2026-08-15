@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaude - O Agente de Código Open Source</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar" role="navigation" aria-label="Navegação principal">
+            <div class="container">
+                <div class="nav-inner">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OpenClaude">
+                            <rect width="32" height="32" rx="8" fill="#2563eb"/>
+                            <path d="M8 16L14 22L24 10" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>OpenClaude</span>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <ul class="nav-links" id="mobile-menu">
+                        <li><a href="#features">Recursos</a></li>
+                        <li><a href="#how-it-works">Como Funciona</a></li>
+                        <li><a href="#getting-started">Instalação</a></li>
+                        <li><a href="#openrouter-tutorial">Tutorial OpenRouter</a></li>
+                        <li><a href="https://github.com/Gitlawb/openclaude" target="_blank" rel="noopener noreferrer" class="btn-github">
+                            GitHub
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 18 7 21 3"></polyline>
+                                <line x1="10" y1="13" x2="18" y2="13"></line>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-content container">
+            <h1>OpenClaude</h1>
+            <p class="tagline">O agente de código open-source que roda no seu terminal</p>
+            <p class="description">
+                Um CLI poderoso para desenvolvimento assistido por IA. Edite arquivos, execute testes,
+                depure código e automatize tarefas — tudo a partir do seu terminal.
+            </p>
+            <div class="hero-actions">
+                <a href="#getting-started" class="btn btn-primary">Começar Agora</a>
+                <a href="https://github.com/Gitlawb/openclaude" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ver no GitHub</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="100" data-suffix="%">100%</span>
+                    <span class="stat-label">Open Source</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="9999" data-suffix="+" aria-label="Mais de 9999 modelos suportados">∞</span>
+                    <span class="stat-label">Modelos Suportados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="0" data-suffix="">0</span>
+                    <span class="stat-label">Vendor Lock-in</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="features section">
+            <div class="container">
+                <h2>Por que OpenClaude?</h2>
+                <p class="section-subtitle">Uma plataforma de desenvolvimento com IA verdadeiramente aberta e flexível</p>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Totalmente Open Source</h3>
+                        <p>Código transparente, licenciado sob MIT. Sem telemetria oculta, sem coleta de dados. Você controla tudo.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Qualquer Modelo, Qualquer Provedor</h3>
+                        <p>Use OpenRouter, Anthropic, OpenAI, modelos locais via Ollama, ou traga o seu próprio. Troque modelos em tempo real.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3>Terminal-First</h3>
+                        <p>Desenvolvido para desenvolvedores que vivem no terminal. Integração nativa com shell, git, e ferramentas de build.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <path d="M8 21h8M12 17v4"/>
+                            </svg>
+                        </div>
+                        <h3>Agentes Especializados</h3>
+                        <p>Sub-agentes para exploração, planejamento, revisão de código, configuração de statusline e muito mais.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>Seguro por Padrão</h3>
+                        <p>Confirmações antes de ações destrutivas, isolamento via worktree, hooks configuráveis. Seu código, suas regras.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Comunidade Ativa</h3>
+                        <p>Desenvolvido abertamente. Contribua com plugins, skills, temas ou correções. Sua voz molda o futuro.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works section">
+            <div class="container">
+                <h2>Como Funciona</h2>
+                <p class="section-subtitle">Em três passos simples, você estará codificando com IA</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <h3>Instale</h3>
+                        <p><code>npm install -g @openclaude/cli</code> ou baixe o binário standalone</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <h3>Configure</h3>
+                        <p>Escolha seu provedor (OpenRouter, Anthropic, Ollama...) e modelo preferido</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <h3>Code</h3>
+                        <p>Digite <code>openclaude</code> no seu projeto e comece a construir com IA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="getting-started" class="getting-started section">
+            <div class="container">
+                <h2>Comece em Segundos</h2>
+                <p class="section-subtitle">Instalação rápida e configuração simples</p>
+                <div class="code-block" role="region" aria-labelledby="code-title">
+                    <div class="code-header">
+                        <span class="code-dot red" aria-hidden="true"></span>
+                        <span class="code-dot yellow" aria-hidden="true"></span>
+                        <span class="code-dot green" aria-hidden="true"></span>
+                        <span class="code-title" id="code-title">terminal</span>
+                        <button class="copy-code-btn" aria-label="Copiar código">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code><span class="comment"># Instalação rápida</span>
+npm install -g @openclaude/cli
+
+<span class="comment"># Ou via script de instalação</span>
+curl -fsSL https://openclaude.dev/install.sh | sh
+
+<span class="comment"># Inicie no seu projeto</span>
+cd meu-projeto
+openclaude
+
+<span class="comment"># Escolha seu provedor e modelo</span>
+<span class="comment"># Comece a codificar!</span></code></pre>
+                </div>
+                <div class="providers">
+                    <h3>Provedores Suportados</h3>
+                    <div class="provider-logos">
+                        <span class="provider-badge">OpenRouter</span>
+                        <span class="provider-badge">Anthropic</span>
+                        <span class="provider-badge">OpenAI</span>
+                        <span class="provider-badge">Google Gemini</span>
+                        <span class="provider-badge">Ollama (Local)</span>
+                        <span class="provider-badge">Custom API</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial OpenRouter -->
+        <section id="openrouter-tutorial" class="tutorial section">
+            <div class="container">
+                <h2>Configuração com OpenRouter</h2>
+                <p class="section-subtitle">Aprenda a escolher um modelo, gerar uma API Key e configurar no OpenClaude</p>
+
+                <div class="tutorial-steps">
+                    <article class="tutorial-step">
+                        <div class="step-number">01</div>
+                        <h3>Criar Conta e API Key</h3>
+                        <ol class="step-list">
+                            <li>Acesse <a href="https://openrouter.ai" target="_blank" rel="noopener noreferrer">https://openrouter.ai</a></li>
+                            <li>Clique em "Sign In" e crie uma conta gratuita</li>
+                            <li>No dashboard, vá em "API Keys"</li>
+                            <li>Clique em "Create New Key", dê um nome e confirme</li>
+                            <li><strong>Copie a chave gerada</strong> (ela começa com <code>sk-or-v1-...</code>)</li>
+                        </ol>
+                    </article>
+
+                    <article class="tutorial-step">
+                        <div class="step-number">02</div>
+                        <h3>Escolher o Melhor Modelo</h3>
+                        <p>Abaixo, os modelos mais usados para desenvolvimento (atualizados regularmente):</p>
+                        <div class="model-grid">
+                            <div class="model-card">
+                                <h4>Qwen 3.8 27B</h4>
+                                <p class="model-meta">qwen/qwen3.8-27b</p>
+                                <p class="model-desc">Modelo de alta performance da Qwen, excelente para tarefas complexas de código.</p>
+                                <span class="model-tag tag-paid">Pago</span>
+                                <span class="model-tag tag-smart">Inteligente</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>Qwen 3.8 Max</h4>
+                                <p class="model-meta">qwen/qwen3.8-max</p>
+                                <p class="model-desc">Versão máxima da Qwen 3.8 com melhor capacidade de raciocínio.</p>
+                                <span class="model-tag tag-paid">Pago</span>
+                                <span class="model-tag tag-smart">Inteligente</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>DeepSeek V4 Pro</h4>
+                                <p class="model-meta">deepseek/deepseek-v4-pro-0813</p>
+                                <p class="model-desc">Alta performance em tarefas de código, preços competitivos.</p>
+                                <span class="model-tag tag-paid">Pago</span>
+                                <span class="model-tag tag-balanced">Equilibrado</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>DeepSeek V4 Flash</h4>
+                                <p class="model-meta">deepseek/deepseek-v4-flash-0731</p>
+                                <p class="model-desc">Versão rápida e eficiente, ideal para respostas ágeis.</p>
+                                <span class="model-tag tag-free">Grátis</span>
+                                <span class="model-tag tag-fast">Rápido</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>Claude Opus 5</h4>
+                                <p class="model-meta">anthropic/claude-opus-5</p>
+                                <p class="model-desc">Melhor qualidade de raciocínio complexo e debugging.</p>
+                                <span class="model-tag tag-paid">Pago</span>
+                                <span class="model-tag tag-smart">Inteligente</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>Claude Sonnet 5</h4>
+                                <p class="model-meta">anthropic/claude-sonnet-5</p>
+                                <p class="model-desc">Excelente equilíbrio entre velocidade e qualidade.</p>
+                                <span class="model-tag tag-paid">Pago</span>
+                                <span class="model-tag tag-balanced">Equilibrado</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>GPT-5 Luna Pro</h4>
+                                <p class="model-meta">openai/gpt-5.6-luna-pro</p>
+                                <p class="model-desc">Modelo avançado da OpenAI para tarefas complexas de código.</p>
+                                <span class="model-tag tag-paid">Pago</span>
+                                <span class="model-tag tag-smart">Inteligente</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>GPT-5 Terra</h4>
+                                <p class="model-meta">openai/gpt-5.6-terra</p>
+                                <p class="model-desc">Modelo versátil da OpenAI para diversas tarefas.</p>
+                                <span class="model-tag tag-paid">Pago</span>
+                                <span class="model-tag tag-balanced">Equilibrado</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>Grok 4.5</h4>
+                                <p class="model-meta">x-ai/grok-4.5</p>
+                                <p class="model-desc">Modelo da xAI com ótima performance em análise e raciocínio.</p>
+                                <span class="model-tag tag-paid">Pago</span>
+                                <span class="model-tag tag-smart">Inteligente</span>
+                            </div>
+                            <div class="model-card">
+                                <h4>Gemini 3.7 Flash</h4>
+                                <p class="model-meta">google/gemini-3.7-flash</p>
+                                <p class="model-desc">Rápido e eficiente, ótimo para tarefas de codificação.</p>
+                                <span class="model-tag tag-free">Grátis</span>
+                                <span class="model-tag tag-fast">Rápido</span>
+                            </div>
+                        </div>
+                        <p class="hint">Dica: modelos gratuitos via <code>:free</code> têm quota diária limitada. Modelos pagos cobrem por token usado.</p>
+                    </article>
+
+                    <article class="tutorial-step">
+                        <div class="step-number">03</div>
+                        <h3>Configurar no OpenClaude</h3>
+                        <p>Configure usando comandos interativos ou variáveis de ambiente:</p>
+                        <div class="tabs">
+                            <div class="tab-header">
+                                <button class="tab-btn active" data-tab="interactive">Interativo</button>
+                                <button class="tab-btn" data-tab="env">Variável de Ambiente</button>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="interactive">
+                                    <div class="code-block-small" role="region" aria-labelledby="interactive-title">
+                                        <div class="code-header">
+                                            <span class="code-dot red" aria-hidden="true"></span>
+                                            <span class="code-dot yellow" aria-hidden="true"></span>
+                                            <span class="code-dot green" aria-hidden="true"></span>
+                                            <span class="code-title" id="interactive-title">terminal</span>
+                                            <button class="copy-code-btn-small" aria-label="Copiar código">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <pre><code><span class="comment"># Execute no terminal</span>
+openclaude --provider openrouter
+
+<span class="comment"># O CLI pedirá a chave da API</span>
+<span class="comment"># Digite sua key: sk-or-v1-...</span>
+
+<span class="comment"># Selecione o modelo</span>
+<span class="comment"># → anthropic/claude-3-opus</span>
+
+<span class="comment"># Salvo em ~/.config/openclaude/config.json</span>
+<span class="comment"># Pronto! Agora é só usar:</span>
+openclaude</code></pre>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="env">
+                                    <div class="code-block-small" role="region" aria-labelledby="env-title">
+                                        <div class="code-header">
+                                            <span class="code-dot red" aria-hidden="true"></span>
+                                            <span class="code-dot yellow" aria-hidden="true"></span>
+                                            <span class="code-dot green" aria-hidden="true"></span>
+                                            <span class="code-title" id="env-title">terminal</span>
+                                            <button class="copy-code-btn-small" aria-label="Copiar código">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <pre><code><span class="comment"># No seu .bashrc, .zshrc ou .env</span>
+export OPENROUTER_API_KEY="sk-or-v1-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+<span class="comment"># Especificar o modelo por padrão</span>
+export OPENROUTER_MODEL="anthropic/claude-3-opus"
+
+<span class="comment"># Inicie o OpenClaude normalmente</span>
+openclaude</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="tutorial-tips">
+                    <h3>Dicas Rápidas</h3>
+                    <ul class="tip-list">
+                        <li><strong>Modelo gratuito</strong>: Use <code>:free</code> no final do modelo para acesso à camada gratuita do OpenRouter</li>
+                        <li><strong>Rate limit</strong>: Modelos gratuitos têm quota diária — monitore no dashboard OpenRouter</li>
+                        <li><strong>Mudar modelo</strong>: Execute <code>/model nome/do/modelo</code> dentro do OpenClaude a qualquer momento</li>
+                        <li><strong>Debug</strong>: Use <code>/debug</code> para ver tokens usados e latência</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section">
+            <div class="container">
+                <h2>Pronto para Codificar com IA?</h2>
+                <p>Junte-se a milhares de desenvolvedores que usam OpenClaude diariamente</p>
+                <a href="https://github.com/Gitlawb/openclaude" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                    Começar no GitHub →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OpenClaude">
+                            <rect width="32" height="32" rx="8" fill="#2563eb"/>
+                            <path d="M8 16L14 22L24 10" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>OpenClaude</span>
+                    </div>
+                    <p>O agente de código open-source para desenvolvedores modernos.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="https://github.com/Gitlawb/openclaude/docs" target="_blank" rel="noopener noreferrer">Documentação</a></li>
+                            <li><a href="https://github.com/Gitlawb/openclaude/discussions" target="_blank" rel="noopener noreferrer">Comunidade</a></li>
+                            <li><a href="https://github.com/Gitlawb/openclaude/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Projeto</h4>
+                        <ul>
+                            <li><a href="https://github.com/Gitlawb/openclaude" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="https://github.com/Gitlawb/openclaude/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Licença MIT</a></li>
+                            <li><a href="https://github.com/Gitlawb/openclaude/contribute" target="_blank" rel="noopener noreferrer">Contribuir</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 OpenClaude. Construído com ❤️ pela comunidade.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
