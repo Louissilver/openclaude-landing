@@ -1,6 +1,5 @@
 # OpenClaude Landing Page
 
-[![Netlify Status](https://img.shields.io/netlify/status/louissilver-openclaude-landing.svg?logo=netlify)](https://louissilver.github.io/openclaude-landing/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Louissilver/openclaude-landing/pulls)
 
@@ -13,8 +12,6 @@ Landing page estática para o **OpenClaude** — um agente de código open-sourc
 ---
 
 ## Demo
-
-![Screenshot](https://louissilver.github.io/openclaude-landing/screenshot.png)
 
 Acesse ao vivo: [https://louissilver.github.io/openclaude-landing/](https://louissilver.github.io/openclaude-landing/)
 
